@@ -1,0 +1,48 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "companyName": "Rosneft'",
+      "bankData": "45833245205820582",
+      "phone": "89991112233",
+      "contact": "Sergey"
+    },
+    {
+      "id": 2,
+      "companyName": "Gazprom",
+      "bankData": "12833245745820564",
+      "phone": "89992223344",
+      "contact": "Yaroslav"
+    }
+  ],
+  "telecasts": [
+    {
+      "id": 1,
+      "name": "Urgant's Evening",
+      "rating": 8,
+      "price": 50000
+    },
+    {
+      "id": 2,
+      "name": "Any Telecast",
+      "rating": 5,
+      "price": 20000
+    }
+  ],
+  "ads": [
+    {
+      "id": 1,
+      "telecast": 1,
+      "client": 2,
+      "date": "20.10.2020",
+      "time": 4
+    },
+    {
+      "id": 2,
+      "telecast": 2,
+      "client": 1,
+      "date": "10.03.2021",
+      "time": 2
+    }
+  ]
+}
