@@ -100,9 +100,20 @@ class DataBaseSQL:
 
     # ***************************************************************************
 
-    def addClients(self,value): self.__clients.append(value)
-    def addTelecasts(self,value): self.__telecasts.append(value)
-    def addAds(self,value): self.__ads.append(value)
+    def addClients(self,value): 
+        for ITEM in self.__clients:
+           if(ITEM.getID() == value.getID()) : return 0
+        self.__clients.append(value)
+
+    def addTelecasts(self,value): 
+        for ITEM in self.__telecasts:
+           if(ITEM.getID() == value.getID()) : return 0
+        self.__telecasts.append(value)
+
+    def addAds(self,value): 
+        for ITEM in self.__ads:
+           if(ITEM.getID() == value.getID()) : return 0
+        self.__ads.append(value)
                              
      # ***************************************************************************
 
@@ -110,6 +121,40 @@ class DataBaseSQL:
         self.__clients.clear()
         self.__telecasts.clear()
         self.__ads.clear()
+
+    # ***************************************************************************
+
+    def removeTelecasts(self,ID): 
+        N = 0
+        for ITEM in self.__telecasts:
+            if(ITEM.getID() == ID): 
+                for I in self.__ads:
+                    if(I.getTelecast() == ITEM):
+                        print("ERROR: Ошибка удаления")
+                        return 0
+                self.__Client.pop(N)
+                return 0
+            N+=1
+       
+    def removeClient(self,ID): 
+        N = 0
+        for ITEM in self.__clients:
+            if(ITEM.getID() == ID):
+                for I in self.__ads:
+                    if(I.getClient() == ITEM):
+                        print("ERROR: Ошибка удаления")
+                        return 0
+                self.__Route.pop(N)
+                return 0
+            N+=1
+
+    def removeAd(self, ID): 
+        N = 0
+        for ITEM in self.__ads:
+            if(ITEM.getID() == ID): 
+                self.__Vouchers.pop(N)
+                return 0
+            N+=1
 
      # ***************************************************************************
 
