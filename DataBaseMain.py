@@ -88,10 +88,10 @@ class DataBaseMain():
 
      # ***************************************************************************
 
-    def setCompanyName(self,ID, value): self.__clients[ID].setCompanyName(Value)
-    def setBankData(self,ID, value): self.__clients[ID].setBankData(Value)
-    def setPhone(self,ID, value): self.__clients[ID].setPhone(Value)
-    def setContact(self, value): self.__clients[ID].setContact(Value)
+    def setCompanyName(self,ID, value): self.__clients[ID].setCompanyName(value)
+    def setBankData(self,ID, value): self.__clients[ID].setBankData(value)
+    def setPhone(self,ID, value): self.__clients[ID].setPhone(value)
+    def setContact(self, value): self.__clients[ID].setContact(value)
 
     def getCompanyName(self,ID): return self.__clients[ID].getCompanyName()
     def getBankData(self,ID): return self.__clients[ID].getBankData()
@@ -100,9 +100,9 @@ class DataBaseMain():
 
     # ***************************************************************************
 
-    def setName(self,ID, value): self.__telecasts[ID].setName(Value)
-    def setRating(self,ID, value): self.__telecasts[ID].setRating(Value)
-    def setPrice(self,ID, value): self.__telecasts[ID].setPrice(Value)
+    def setName(self,ID, value): self.__telecasts[ID].setName(value)
+    def setRating(self,ID, value): self.__telecasts[ID].setRating(value)
+    def setPrice(self,ID, value): self.__telecasts[ID].setPrice(value)
 
     def getName(self,ID): return self.__telecasts[ID].getName()
     def getRating(self,ID): return self.__telecasts[ID].getRating()
@@ -110,10 +110,10 @@ class DataBaseMain():
       
     # ***************************************************************************
 
-    def setTelecast(self,ID, value): self.__ads[ID].setTelecast(Value)
-    def setClient(self,ID, value): self.__ads[ID].setClient(Value)
-    def setDate(self,ID, value): self.__ads[ID].setDate(Value)
-    def setTime(self,ID, value): self.__ads[ID].setTime(Value)
+    def setTelecast(self,ID, value): self.__ads[ID].setTelecast(value)
+    def setClient(self,ID, value): self.__ads[ID].setClient(value)
+    def setDate(self,ID, value): self.__ads[ID].setDate(value)
+    def setTime(self,ID, value): self.__ads[ID].setTime(value)
 
     def getTelecast(self,ID): return self.__ads[ID].getTelecast()
     def getClient(self,ID): return self.__ads[ID].getClient()
@@ -125,5 +125,3 @@ class DataBaseMain():
     def getArrClient(self): return self.__clients
     def getArrTelecasts(self): return self.__telecasts
     def getArrAds(self): return self.__ads
-
-
