@@ -30,10 +30,3 @@ class Ad():
   def __str__(self):
         return "ID: {}\nПередача: {}\nКлиент: {}\nДата показа: {}\nДлительность в минутах: {} ".format(
             self.__id, self.__telecast, self.__client, self.__date, self.__time)
-
-
-class AdList(list):
-    def getByID(self, id):
-          for item in self:
-                if item.getID() == id: return item
-          else: return None 

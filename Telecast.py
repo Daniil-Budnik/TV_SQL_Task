@@ -20,8 +20,3 @@ class Telecast():
         return "ID: {}\nНазвание: {}\nРейтинг: {}\nСтоимость минуты: {}".format(
             self.__id, self.__name, self.__rating, self.__price)
 
-class TelecastList(list):
-    def getByID(self, id):
-          for item in self:
-                if item.getID() == id: return item
-          else: return None 

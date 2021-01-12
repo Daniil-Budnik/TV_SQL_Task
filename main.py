@@ -39,7 +39,8 @@ def Task_1():
 
 def Task_2():
 
-    DB = AC.Accounting("data.json")
+    DB = AC.Accounting()
+    DB.read("data.json")
 
     print("\nПередачи:\n")
     for ITEM in DB.getArrTelecasts(): print(ITEM,'\n')
@@ -81,7 +82,8 @@ def Task_2():
 def Task_3(): 
     MyDB.GenTestFile("DataBase.db")
 
-    DB = MyDB.DataBaseSQL("DataBase.db")
+    DB = MyDB.DataBaseSQL()
+    DB.read("DataBase.db")
 
     print("\nПередачи:\n")
     for ITEM in DB.getArrTelecasts(): print(ITEM,'\n')
@@ -121,8 +123,7 @@ def Task_3():
 
 def Main():
     #Task_1()
-    Task_2()
-    print('\n\n\n')
+    #Task_2()
     Task_3()
 
 # ***************************************************************************
